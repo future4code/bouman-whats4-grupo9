@@ -39,7 +39,9 @@ class App extends React.Component {
 
 
   render() {
+    
     return (
+      
       <div className="container-pai">
         <div className="container-msg">
          {this.state.userAndMsg.map(userMensagem => {

@@ -54,7 +54,7 @@ class Whats extends React.Component {
        
         {this.state.valoresRecebidos.map(person => {
             return(
-                <teste key={this.valoresRecebidos.indexOf(person)} userMsg={person.userMsg}/>
+                <Teste key={this.valoresRecebidos.indexOf(person)} userMsg={person.userMsg}/>
             );
         }
         ) 

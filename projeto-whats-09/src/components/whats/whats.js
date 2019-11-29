@@ -1,82 +1,99 @@
 import React from 'react';
 import "./whats.css" ;
 import { isTerminatorless } from '@babel/types';
+import styled from "styled-components";
 
+const Teste = styled`
 
+`;
 
-class Whats extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            userName: "",
-            userMsg: "",
-            valoresRecebidos: []
-        }
-    }
+function Whats(props){
+    return(
+        <Container>
+            <CampoUser>{props.userName}</CampoUser>
+            <CampoMsg>{props.userMsg}</CampoMsg>
+        </Container>
+    )
+}
+
+// key={this.valoresRecebidos.indexOf(person)} userMsg={person.userMsg}
+
+// class Whats extends React.Component {
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//             userName: "",
+//             userMsg: "",
+//             valoresRecebidos: []
+//         }
+//     }
     
 
 
-    aoMudarName = e => {
-        this.setState({
-            userName: e.target.value,
-        })
-    }
+//     aoMudarName = e => {
+//         this.setState({
+//             userName: e.target.value,
+//         })
+//     }
 
-    aoMudarMsg = e => {
-        this.setState({
-            userMsg: e.target.value,
-        })
-    }
+//     aoMudarMsg = e => {
+//         this.setState({
+//             userMsg: e.target.value,
+//         })
+//     }
     
 
-    aoClicarEnviar = () =>{
-        let copiaValorRecebido = [...this.state.valoresRecebidos]
-        const novaMsg = {
-            usuario: this.state.userName,
-            mensagem: this.state.userMsg
-        }
-        copiaValorRecebido.push(novaMsg)
-        this.setState({
-            valoresRecebidos:copiaValorRecebido})
+//     aoClicarEnviar = () =>{
+//         let copiaValorRecebido = [...this.state.valoresRecebidos]
+//         const novaMsg = {
+//             usuario: this.state.userName,
+//             mensagem: this.state.userMsg
+//         }
+//         copiaValorRecebido.push(novaMsg)
+//         this.setState({
+//             valoresRecebidos:copiaValorRecebido})
 
-    }
+//     }
     
 
 
-    render(){
+//     render(){
    
-        return(
+//         return(
     
-    <div>
+//     <div>
 
-        <p>{this.state.userName}</p>
-        <p>{this.state.userMsg}</p>
+//         <p>{this.state.userName}</p>
+//         <p>{this.state.userMsg}</p>
        
-        {this.state.valoresRecebidos.map(person => {
-            return(
-                <teste key={this.valoresRecebidos.indexOf(person)} userMsg={person.userMsg}/>
-            );
-        }
-        ) 
+//         {this.state.valoresRecebidos.map(person => {
+//             return(
+//                 <Container>
+//                     <Teste key={this.valoresRecebidos.indexOf(person)} userMsg={person.userMsg}/>
+//                 </Container>
+                
+//             );
+//         }
+//         ) 
 
-    }
+//     }
 
             
-    <input placeholder="User" onChange={this.aoMudarName} 
-    value={this.state.userName}/>
+//     <input placeholder="User" onChange={this.aoMudarName} 
+//     value={this.state.userName}/>
     
-    <input placeholder="MSG" onChange={this.aoMudarMsg} 
-    value={this.state.userMsg} />
+//     <input placeholder="MSG" onChange={this.aoMudarMsg} 
+//     value={this.state.userMsg} />
     
-    <button onClick={this.aoClicarEnviar}>Enviar</button>
+//     <button onClick={this.aoClicarEnviar}>Enviar</button>
     
-    </div>
+//     </div>
 
-        );
-}
+//         );
+// }
 
 
-}
+// }
 
 
 
